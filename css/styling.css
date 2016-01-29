@@ -1,5 +1,11 @@
 .navbar-default{
 	text-align: center;
 	font-size: 50px;
+}
+.commentHistory{
+	padding: 20px 5px 50px 20px;
 
+}
+.commentHistory {
+	padding-left: 10px;
 }

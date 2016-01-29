@@ -22,9 +22,15 @@ app.config(function($routeProvider){
 		});
 });
 app.controller("formValidation", ["$scope", function($scope){
+	$scope.posts = [];
 	$scope.addComment = function(){
 		if($scope.commentForm.$valid){
-			$scope.notie.alert(1,"Your comment submitted successfully!!!", 2);
+			$scope.posts.push({
+				name: $scope.name,
+				email: $scope.email,
+				comment: $scope.comment
+			});
+			//alert('Your comment submitted successfully!');
 		}
 	};
 }]);
