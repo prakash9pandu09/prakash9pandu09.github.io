@@ -7,3 +7,6 @@ app.controller("aboutCtrl", ["$scope", function($scope){
 app.controller("dateCtrl", ["$scope", function($scope){
 	$scope.date = new Date();
 }]);
+app.controller("commentCtrl", ["$scope", function($scope){
+
+}]);

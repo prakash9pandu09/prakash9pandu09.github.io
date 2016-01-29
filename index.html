@@ -9,6 +9,7 @@
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="bower_components/notie/notie.js"></script>
 	<link rel="stylesheet" href="css/styling.css">
 </head>
 <body>
@@ -28,6 +29,30 @@
 			</div>
 			<div class="row">
 				<div ng-view></div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<form ng-controller="formValidation" name="commentForm" ng-submit="addComment()" novalidate>
+						<h1>Comments</h1>
+						<div class="form-group">
+							<label for="name">Name</label>
+							<input type="text" class="form-control" name="name" ng-model="name" placeholder="Your name" required>
+							<!--<span ng-show="commentForm.name.$error.required">Please enter you name.</span> -->
+						</div>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" class="form-control" name="email" ng-model="email" placeholder="example@gmail.com" required>
+							<!--<span ng-show="commentForm.email.$error.required">Please enter your email...</span> -->
+							<span ng-show="commentForm.email.$error.email">Enter correct email.</span>
+						</div>
+						<div class="form-group">
+							<label for="comment">Comment here</label>
+							<textarea class="form-control" name="comment" id="comment" ng-model="comment" placeholder="Write comments here..." required></textarea>
+							<!--<span ng-show="commentForm.comment.$error.required">Please add your comments.</span> -->
+						</div>
+						<button type="submit" class="btn btn-info" ng-disabled="commentForm.$invalid">Comment</button>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
