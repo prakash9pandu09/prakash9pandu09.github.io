@@ -1,0 +1,10 @@
+.row{
+	padding: 10px;
+	text-align: center;
+	font-family: "Georgia", serif, sans-serif;
+	font-size: 30px; 
+}
+.fa-github{
+	text-align: center;
+	padding-bottom: 2px;
+}
