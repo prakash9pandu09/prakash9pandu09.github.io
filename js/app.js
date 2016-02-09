@@ -11,18 +11,31 @@ app.config(function($routeProvider){
 			templateUrl : "pages/about.html",
 			controller : "aboutCtrl"
 		})
-		//date page
-		.when("/date", {
-			templateUrl : "pages/date.html",
-			controller : "dateCtrl"
+		//talks page
+		.when("/talks", {
+			templateUrl : "pages/talks.html",
+			controller : "talksCtrl"
 		})
+		//comments 
 		.when("/comment", {
 			templateUrl : "pages/comment.html",
 			controller : "commentCtrl"
-		});
+		})
+		//contacts page
+		.when("/contacts", {
+			templateUrl : "pages/contacts.html",
+			controller : "contactsCtrl"
+		})
+	.otherwise({
+		redirectTo : "/"
+	});
 });
 app.controller("formValidation", ["$scope", function($scope){
-	$scope.posts = [];
+	$scope.posts = [
+		{name: "Jyothi Praksh",
+		email: "prakash9pandu09@gmail.com",
+		comment: "You are awesome man..." }
+	];
 	$scope.addComment = function(){
 		if($scope.commentForm.$valid){
 			$scope.posts.push({
@@ -30,7 +43,9 @@ app.controller("formValidation", ["$scope", function($scope){
 				email: $scope.email,
 				comment: $scope.comment
 			});
-			//alert('Your comment submitted successfully!');
+			$scope.name = '';
+			$scope.email = '';
+			$scope.comment = '';
 		}
 	};
 }]);

@@ -771,7 +771,7 @@ var notie = function(){
         input: input
     };
 
-};
+}();
 
 if (typeof module !== 'undefined' && module) {
     module.exports = notie;

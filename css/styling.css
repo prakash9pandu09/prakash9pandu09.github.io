@@ -3,9 +3,12 @@
 	font-size: 50px;
 }
 .commentHistory{
-	padding: 20px 5px 50px 20px;
+	padding: 20px 5px 5px 20px;
 
 }
-.commentHistory {
+.commentHistory div div p{
 	padding-left: 10px;
+}
+.commentHistory div div{
+
 }

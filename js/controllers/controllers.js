@@ -4,8 +4,11 @@ app.controller("homePageCtrl", ["$scope", function($scope){
 app.controller("aboutCtrl", ["$scope", function($scope){
 	$scope.about = "Tell me about yourself";
 }]);
-app.controller("dateCtrl", ["$scope", function($scope){
-	$scope.date = new Date();
+app.controller("talksCtrl", ["$scope", function($scope){
+	$scope.talks = "My talks";
+}]);
+app.controller("contactsCtrl", ["$scope", function($scope){
+	$scope.contacts = "My contacts";
 }]);
 app.controller("commentCtrl", ["$scope", function($scope){
 
