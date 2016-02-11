@@ -1,4 +1,4 @@
-var app = angular.module("app", ["ngRoute"]);
+var app = angular.module("app", ["ngRoute", "ngAnimate"]);
 app.config(function($routeProvider){
 	$routeProvider
 		//Default page
@@ -16,10 +16,10 @@ app.config(function($routeProvider){
 			templateUrl : "pages/talks.html",
 			controller : "talksCtrl"
 		})
-		//comments 
-		.when("/comment", {
-			templateUrl : "pages/comment.html",
-			controller : "commentCtrl"
+		//projects 
+		.when("/projects", {
+			templateUrl : "pages/projects.html",
+			controller : "projectsCtrl"
 		})
 		//contacts page
 		.when("/contacts", {
@@ -30,7 +30,7 @@ app.config(function($routeProvider){
 		redirectTo : "/"
 	});
 });
-app.controller("formValidation", ["$scope", function($scope){
+/*app.controller("formValidation", ["$scope", function($scope){
 	$scope.posts = [
 		{name: "Jyothi Praksh",
 		email: "prakash9pandu09@gmail.com",
@@ -48,4 +48,4 @@ app.controller("formValidation", ["$scope", function($scope){
 			$scope.comment = '';
 		}
 	};
-}]);
+}]); */

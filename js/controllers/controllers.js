@@ -7,9 +7,9 @@ app.controller("aboutCtrl", ["$scope", function($scope){
 app.controller("talksCtrl", ["$scope", function($scope){
 	$scope.talks = "My talks";
 }]);
+app.controller("projectsCtrl", ["$scope", function($scope){
+
+}]);
 app.controller("contactsCtrl", ["$scope", function($scope){
 	$scope.contacts = "My contacts";
-}]);
-app.controller("commentCtrl", ["$scope", function($scope){
-
 }]);

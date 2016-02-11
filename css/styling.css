@@ -1,8 +1,17 @@
-.navbar-default{
-	text-align: center;
-	font-size: 50px;
+
+.container-fluid{
+	background: ghostwhite;
+	padding-left: 100px;
 }
-.commentHistory{
+.navbar-collapse{
+	padding: 20px 0px 20px 100px;
+	text-align: center;
+}
+.navbar-info{
+	text-align: center;
+	font-size: inherit;
+}
+/*.commentHistory{
 	padding: 20px 5px 5px 20px;
 
 }
@@ -11,4 +20,43 @@
 }
 .commentHistory div div{
 
+} */
+.homepage{
+	padding-right: 100px;
+}
+.viewNg{
+	margin: 0px;
+	font-size: inherit;
+	padding: 5px 0px 0px 40px;
+}
+.resume{
+	border: 2px solid #ddd;
+	margin: 5%;
+	padding: 5%;
+}
+.resume h1{
+	font-size: 25px;
+	color: skyblue;
+}
+.resume h3{
+	color: skyblue;
+}
+.workingAt{
+	float: left;
+}
+.contactMe{
+	float: right;
+	padding: 25px 0px 0px 150px;
+}
+.education p span{
+	float: right;
+	padding-right: 30%;
+}
+.animate-enter{
+	-webkit-transition: 1s linear all; /* Chrome */
+	transition: 1s linear all;
+	opacity: 0;
+}
+.animate-enter.animate-enter-active {
+	opacity: 1;
 }

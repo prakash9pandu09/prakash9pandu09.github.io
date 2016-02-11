@@ -2,73 +2,41 @@
 <html lang="en" ng-app="app">
 <head>
 	<meta charset="UTF-8">
-	<title>Hello World</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Jyothi Prakash</title>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
 	<link rel="stylesheet" href="css/styling.css">
 </head>
 <body>
-	<div class="container">
-		<div class="row" ng-controller="formValidation">
-			<div class="navbar navbar-default">
-				<div class="container-fluid">
-					<div class="navbar-header col-md-12">
-						<div class="navbar-brand">
-							<a href="https://github.com/"><i class="fa fa-github fa-2x"></i></a>
-						</div>
-						<a href="#/"><button class="btn btn-primary">Homepage</button></a>
-						<a href="#/about"><button class="btn btn-success">About</button></a>
-						<a href="#/talks"><button class="btn btn-info">Talks</button></a>
-						<a href="#/contacts"><button class="btn btn-warning">Contacts</button></a>
-					</div>
+	<nav class="navbar navbar-info">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<div class="navbar-brand">
+					<a href="https://github.com/prakash9pandu09/"><i class="fa fa-github fa-3x"></i></a>
 				</div>
-			</div>
-			<div class="row">
-				<div ng-view></div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<form name="commentForm" ng-submit="addComment()" novalidate>
-						<h1>Comments</h1>
-						<div class="form-group">
-							<label for="name">Name</label>
-							<input type="text" class="form-control" name="name" ng-model="name" placeholder="Your name" required>
-							<!--<span ng-show="commentForm.name.$error.required">Please enter you name.</span> -->
-						</div>
-						<div class="form-group">
-							<label for="email">Email</label>
-							<input type="email" class="form-control" name="email" ng-model="email" placeholder="example@gmail.com" required>
-							<!--<span ng-show="commentForm.email.$error.required">Please enter your email...</span> -->
-							<span ng-show="commentForm.email.$error.email">Enter correct email.</span>
-						</div>
-						<div class="form-group">
-							<label for="comment">Comment here</label>
-							<textarea class="form-control" name="comment" id="comment" ng-model="comment" placeholder="Write comments here..." required></textarea>
-							<!--<span ng-show="commentForm.comment.$error.required">Please add your comments.</span> -->
-						</div>
-						<button type="submit" class="btn btn-info" ng-disabled="commentForm.$invalid">Comment</button>
-					</form>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 commentHistory">
-					<div ng-repeat="post in posts">
-						<div>
-							<h2><strong>{{post.name}}</strong></h2>
-							<p>{{post.email}}</p>
-						</div><hr>
-						<div>
-							{{post.comment}}
-						</div> <hr>
-					</div>
-				</div>
+				<div class="navbar-collapse collapse">
+	    			<ul class="nav navbar-nav">
+	    			    <li><a href="#/"><i class="fa fa-home fa-2x"></i> Homepage</a></li>
+	    				<li><a href="#/about"><i class="fa fa-product-hunt fa-2x"></i> Resume</a></li>
+	    				<li><a href="#/talks"><i class="fa fa-location-arrow fa-2x"></i> Talks</a></li>
+	    				<li><a href="#/projects"><i class="fa fa-users fa-2x"></i> Projects</a></li>
+	    				<li><a href="#/contacts"><i class="fa fa-phone fa-2x"></i> Reach Me At</a></li>
+	    			</ul>
+	    		</div>
 			</div>
 		</div>
+	</nav>
+	<div class="row viewNg">
+		<div ng-view ng-animate="{enter:'animate-enter', leave: 'animate-leave'}"></div>
 	</div>
+
 	<script src="js/app.js"></script>
 	<script src="js/controllers/controllers.js"></script>
 	<script src="bower_components/notie/notie.js"></script>
